@@ -33,6 +33,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CoQuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NguoiLienHe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhanVienGhiNhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhanVienThucHien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThucTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +75,9 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
+            this.listBox1.Items.AddRange(new object[] {
+            "Đang xử lý",
+            "Không thể xử lý"});
             this.listBox1.Location = new System.Drawing.Point(12, 110);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(210, 372);
@@ -78,12 +86,53 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CoQuan,
+            this.NguoiLienHe,
+            this.NhanVienGhiNhan,
+            this.NhanVienThucHien,
+            this.ThucTrang});
             this.dataGridView1.Location = new System.Drawing.Point(248, 110);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(635, 372);
             this.dataGridView1.TabIndex = 4;
+            // 
+            // CoQuan
+            // 
+            this.CoQuan.HeaderText = "Cơ quan";
+            this.CoQuan.MinimumWidth = 6;
+            this.CoQuan.Name = "CoQuan";
+            this.CoQuan.Width = 125;
+            // 
+            // NguoiLienHe
+            // 
+            this.NguoiLienHe.HeaderText = "Người liên hệ";
+            this.NguoiLienHe.MinimumWidth = 6;
+            this.NguoiLienHe.Name = "NguoiLienHe";
+            this.NguoiLienHe.Width = 125;
+            // 
+            // NhanVienGhiNhan
+            // 
+            this.NhanVienGhiNhan.HeaderText = "Nhân viên ghi nhận";
+            this.NhanVienGhiNhan.MinimumWidth = 6;
+            this.NhanVienGhiNhan.Name = "NhanVienGhiNhan";
+            this.NhanVienGhiNhan.Width = 125;
+            // 
+            // NhanVienThucHien
+            // 
+            this.NhanVienThucHien.HeaderText = "Nhân viên thực hiện";
+            this.NhanVienThucHien.MinimumWidth = 6;
+            this.NhanVienThucHien.Name = "NhanVienThucHien";
+            this.NhanVienThucHien.Width = 125;
+            // 
+            // ThucTrang
+            // 
+            this.ThucTrang.HeaderText = "Thực trạng";
+            this.ThucTrang.MinimumWidth = 6;
+            this.ThucTrang.Name = "ThucTrang";
+            this.ThucTrang.Width = 125;
             // 
             // THYCKH
             // 
@@ -109,5 +158,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CoQuan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NguoiLienHe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NhanVienGhiNhan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NhanVienThucHien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThucTrang;
     }
 }

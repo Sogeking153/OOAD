@@ -55,7 +55,13 @@ namespace OOAD
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //dataGridView2.Rows.RemoveAt(dataGridView2.Rows.Count - 2);
+           /* int temp= dataGridView2.RowCount;
+            dataGridView2.Rows[temp - 1].Cells[0].Value = "no";
+            dataGridView2.Rows[temp - 1].Cells[1].Value = "no";
+            dataGridView2.Rows[temp - 1].Cells[2].Value = "no";
+            dataGridView2.Rows[temp - 1].Cells[3].Value = "no";
+            dataGridView2.Rows.RemoveAt(temp - 1);*/
+
 
             if (dataGridView2.Rows.Count > 0)
             {
@@ -171,17 +177,21 @@ namespace OOAD
         {
             int index = dataGridView1.CurrentRow.Index;
             int count = dataGridView2.RowCount;
-            DataGridViewRow row = (DataGridViewRow)dataGridView2.Rows[count-1].Clone();
-            row.Cells[0].Value = 0;
-            row.Cells[1].Value = 0;
-            row.Cells[2].Value = 0;
-            row.Cells[3].Value = 0;
-            dataGridView2.Rows.Add(row);
+            if (count == 0)
+            {
+                int rowID = dataGridView2.Rows.Add();
+                DataGridViewRow rownew = dataGridView2.Rows[rowID];
+            }
+            else
+            {
+                DataGridViewRow row = (DataGridViewRow)dataGridView2.Rows[0].Clone();
+                dataGridView2.Rows.Add(row);
+            }
 
-            dataGridView2.Rows[count-1].Cells[0].Value = dataGridView1.Rows[index].Cells[0].Value.ToString();
-            dataGridView2.Rows[count-1].Cells[1].Value = dataGridView1.Rows[index].Cells[1].Value.ToString();
-            dataGridView2.Rows[count-1].Cells[2].Value = dataGridView1.Rows[index].Cells[3].Value.ToString();
-            dataGridView2.Rows[count-1].Cells[3].Value = dataGridView1.Rows[index].Cells[4].Value.ToString();
+            dataGridView2.Rows[count].Cells[0].Value = dataGridView1.Rows[index].Cells[0].Value.ToString();
+            dataGridView2.Rows[count].Cells[1].Value = dataGridView1.Rows[index].Cells[1].Value.ToString();
+            dataGridView2.Rows[count].Cells[2].Value = dataGridView1.Rows[index].Cells[3].Value.ToString();
+            dataGridView2.Rows[count].Cells[3].Value = dataGridView1.Rows[index].Cells[4].Value.ToString();
 
         }
 

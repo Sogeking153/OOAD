@@ -131,6 +131,7 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaHang2,
@@ -196,15 +197,14 @@
             this.MaHang2.HeaderText = "Mã hàng";
             this.MaHang2.MinimumWidth = 6;
             this.MaHang2.Name = "MaHang2";
-            this.MaHang2.Width = 125;
             // 
             // TenHang2
             // 
+            this.TenHang2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TenHang2.DataPropertyName = "Ten";
             this.TenHang2.HeaderText = "Tên hàng";
             this.TenHang2.MinimumWidth = 6;
             this.TenHang2.Name = "TenHang2";
-            this.TenHang2.Width = 125;
             // 
             // DonGia2
             // 
@@ -220,7 +220,7 @@
             this.TGBH2.HeaderText = "TGBH";
             this.TGBH2.MinimumWidth = 6;
             this.TGBH2.Name = "TGBH2";
-            this.TGBH2.Width = 125;
+            this.TGBH2.Width = 75;
             // 
             // BaoGiaTheoYC
             // 
